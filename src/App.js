@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import Bottomnav from './components/Bottomnav';
+import Headtohead from './components/headtohead';
+import Info from './components/Info';
+import Matches from './components/Matches';
+import MatchStream from './components/MatchStream';
+import Navbar from './components/Navbar';
+import Pathbar from './components/Pathbar';
+import PlayerStats from './components/PlayerStats';
+import Statistics from './components/Statistics';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Pathbar />
+      <MatchStream />
+      <Bottomnav />
+
+      <div className="statsmainwrapper">
+        <div className="statsmaingrid">
+          <Statistics />
+          <PlayerStats />
+        </div>
+      </div>
+      <Headtohead />
+
+      <div className='bottomgridwrapper'>
+        <div className="bottomgrid">
+          <Matches />
+          <Info />
+        </div>
+      </div>
     </div>
   );
 }
