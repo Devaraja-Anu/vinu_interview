@@ -38,6 +38,7 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 
@@ -376,6 +377,7 @@ body{
     margin-top: 2rem;
     margin-right: 1rem;
     border-radius: 1rem;
+    padding-bottom: 3rem;
 
     h1{
         padding-left: 3rem;
@@ -476,6 +478,15 @@ width: 100%;
                 @include p-x(1rem);
                 }
 
+            select{
+                border: 0;
+                border-radius: 50%;
+                padding: .5rem 1rem;  
+            }
+            select::-ms-expand{
+                    display: none;
+                }
+
         }
     }
 
@@ -568,7 +579,7 @@ width: 100%;
     }
 
     .statpages{
-        height:4.3rem;
+        height:6rem;
         width: 100%;
         @include flexCenter(row);
         justify-content: end;
@@ -616,7 +627,7 @@ width: 100%;
     
 
     .head2head{
-        margin:2rem 0rem;
+        margin:1.5rem 0rem;
         background-color: white;
         width: 90vw;
         border-radius: .5rem;
@@ -629,6 +640,7 @@ width: 100%;
         .head2headgrid{
             display: grid;
             grid-template-columns: 33% 33% 33%;
+            padding-bottom: 4rem;
 
             .matchunit{
                 margin: 1rem 3rem;
@@ -662,7 +674,6 @@ width: 100%;
     
     background-color:$mainblue;
     border-radius: .5rem;
-    margin-top: 1.3rem;
 
     .matchesheadings{
         @include flexCenter(row);
@@ -695,7 +706,7 @@ width: 100%;
 
     .matchlist{
 
-        padding: 2rem 0;
+        padding: 1.2rem 0;
 
         .matchSchedule{
             @include flexCenter(row);
@@ -732,6 +743,8 @@ width: 100%;
 
     .mainheading{
         padding-top:3rem;
+        padding-bottom: 2rem;
+        margin: 0;
     }
 
     .detailsgrid{
@@ -741,7 +754,7 @@ width: 100%;
         .details{
             @include flexCenter(row);
             padding-right: 3rem;
-            padding-bottom: 3rem;
+            padding-bottom: 1rem;
             justify-content: start;
 
             .imageround{
