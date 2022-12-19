@@ -2,8 +2,6 @@ import logo from '../assets/images/logo.png'
 import search from "../assets/images/searchGlass.png";
 import bell from "../assets/images/bell.png";
 
-import { Link } from 'react-router-dom';
-
 function Navbar() {
 
 
