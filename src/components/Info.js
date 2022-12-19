@@ -5,21 +5,39 @@ import stadium from "../assets/images/stadium.png"
 
 
 const Info = () => {
+
+    const infoDB = [
+      {
+        image: calendar,
+        heading: "Date",
+        info: "16 Jan 2021",
+      },
+      {
+        image: stadium,
+        heading: "Stadium",
+        info: "Nou Camp, Barcelona",
+      },
+      {
+        image: whistle,
+        heading: "Referee",
+        info: "Davidson Samuel",
+      },
+    ];
   return (
     <div className="infowrapper">
       <div className="info">
         <h2 className="mainheading">Match Info</h2>
 
         <div className="detailsgrid">
-          {[0, 1, 2].map((item) => {
+          {infoDB.map((item) => {
             return (
               <div className="details">
                 <div className="imageround">
-                  <img src={calendar} alt="a small art" />
+                  <img src={item.image} alt="a small art" />
                 </div>
                 <div className="imgdetails">
-                  <p>Date</p>
-                  <p>16 Jan 2021</p>
+                  <p>{item.heading}</p>
+                  <p>{item.info}</p>
                 </div>
               </div>
             );
